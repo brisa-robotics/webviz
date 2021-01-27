@@ -61,6 +61,7 @@ const STopicTreeWrapper = styled.div`
 
   // Allow clicks right above the TopicTree to close it
   pointer-events: none;
+  visibility: hidden;
 `;
 
 const STopicTree = styled(animated.div)`
