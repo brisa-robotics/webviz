@@ -64,37 +64,8 @@ function App({ importPanelLayout: importPanelLayoutProp }) {
       <PlayerManager>
         {({ inputDescription }) => (
           <>
-            <Toolbar>
-              <div className={styles.left}>
-                <div className={styles.logoWrapper}>
-                  <a href="/">
-                    <Logo width={LOGO_SIZE} height={LOGO_SIZE} />
-                  </a>
-                  webviz
-                </div>
-              </div>
-
-              <div className={styles.block} style={{ marginRight: 5 }}>
-                {!inAutomatedRunMode() && <NotificationDisplay />}
-              </div>
-              <div className={styles.block}>
-                <LayoutMenu />
-              </div>
-              <div className={styles.block}>
-                <AppMenu />
-              </div>
-              <div className={styles.block}>
-                <TinyConnectionPicker inputDescription={inputDescription} />
-              </div>
-              <div className={styles.block} style={{ marginRight: "10px" }}>
-                <SettingsMenu />
-              </div>
-            </Toolbar>
             <div className={cx(styles.layout, "PanelLayout-root")}>
               <PanelLayout />
-            </div>
-            <div className={styles["playback-controls"]}>
-              <PlaybackControls />
             </div>
           </>
         )}
