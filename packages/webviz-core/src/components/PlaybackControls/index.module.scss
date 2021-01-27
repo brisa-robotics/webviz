@@ -9,6 +9,7 @@
 @import "~webviz-core/src/styles/variables.scss";
 
 .container {
+  visibility: hidden;
   padding: 16px;
   height: $playbackControlHeight;
   align-items: center;
