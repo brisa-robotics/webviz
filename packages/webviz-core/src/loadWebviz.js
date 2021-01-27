@@ -227,6 +227,8 @@ export async function loadWebviz(hooksToSet) {
     ReactDOM.render(<hooks.Root history={history} initializationResult={initializationResult} />, rootEl);
   }
 
+  render();
+  /*
   // Render a warning message if the user has an old browser.
   // From https://stackoverflow.com/a/4900484
   const chromeMatch = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
@@ -254,4 +256,5 @@ export async function loadWebviz(hooksToSet) {
   } else {
     render();
   }
+*/
 }
