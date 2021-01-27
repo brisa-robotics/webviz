@@ -103,30 +103,6 @@ function LayoutToolbar({
       />
       <div className={cx(styles.toolbar, styles.right)}>
         <div className={styles.buttons}>
-          <SearchText
-            searchTextOpen={searchTextOpen}
-            toggleSearchTextOpen={toggleSearchTextOpen}
-            searchText={searchText}
-            setSearchText={setSearchText}
-            setSearchTextMatches={setSearchTextMatches}
-            searchTextMatches={searchTextMatches}
-            searchInputRef={searchInputRef}
-            setSelectedMatchIndex={setSelectedMatchIndex}
-            selectedMatchIndex={selectedMatchIndex}
-            onCameraStateChange={onCameraStateChange}
-            cameraState={cameraState}
-            transforms={transforms}
-            rootTf={rootTf}
-            onFollowChange={onFollowChange}
-          />
-        </div>
-        <div className={styles.buttons}>
-          <FollowTFControl
-            transforms={transforms}
-            tfToFollow={followTf ? followTf : undefined}
-            followOrientation={followOrientation}
-            onFollowChange={onFollowChange}
-          />
         </div>
         <MainToolbar
           measureInfo={measureInfo}
@@ -137,11 +113,6 @@ function LayoutToolbar({
           onToggleDebug={onToggleDebug}
         />
         {measuringElRef.current && measuringElRef.current.measureDistance}
-        <Interactions
-          selectedObject={selectedObject}
-          interactionsTabType={interactionsTabType}
-          setInteractionsTabType={setInteractionsTabType}
-        />
         <DrawingTools
           onSetPolygons={onSetPolygons}
           polygonBuilder={polygonBuilder}
